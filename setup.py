@@ -8,10 +8,10 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as readme:
     LONG_DESCRIPTION = readme.read()
 
 setup(
-    name='kep-simgen',
+    name='kepsimgen',
     install_requires=['keppy'],
     version='0.0.1',
-    description='A Python parser of Kepware projects',
+    description='CLI tool that converts Kepware projects into simulation projects',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
     url='https://github.com/jmbeach/kep-simgen',

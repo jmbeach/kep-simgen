@@ -13,4 +13,10 @@ simulate a real project with the same tag names.
 
 # Install
 
-`pip install kep-simgen`
+`pip install kepsimgen`
+
+# Usage
+
+`$> kep-simgen my-kepware-project.json`
+
+Use `kep-simgen -?` for more detailed instructions
