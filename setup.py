@@ -9,6 +9,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as readme:
 
 setup(
     name='kep-simgen',
+    install_requires=['keppy'],
     version='0.0.1',
     description='A Python parser of Kepware projects',
     long_description=LONG_DESCRIPTION,
