@@ -31,13 +31,18 @@ Options:
         "8" or "16" for 8 bit or 16 bit. Default is 8 bit.
 """
 
+def process_groups(groups, simulator):
+    for group in groups:
+        for tag in group.tags:
+            simulator.process_tag(tag)
+        if (len(group.sub_groups) > 0):
+            process_groups(group.sub_groups, simulator)
+
 def process_devices(devices):
     """Process all tags in all devices"""
     for device in devices:
         simulator = SimulatorDevice(device.is_sixteen_bit)
-        for tag_group in device.tag_groups:
-            for tag in tag_group.tags:
-                simulator.process_tag(tag)
+        process_groups(device.tag_groups, simulator)
 
 def main():
     """MAIN"""
