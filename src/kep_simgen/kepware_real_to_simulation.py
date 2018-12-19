@@ -42,6 +42,8 @@ def process_devices(devices):
     """Process all tags in all devices"""
     for device in devices:
         simulator = SimulatorDevice(device.is_sixteen_bit)
+        for tag in device.tags:
+            simulator.process_tag(tag)
         process_groups(device.tag_groups, simulator)
 
 def main():
