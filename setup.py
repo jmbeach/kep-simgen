@@ -10,7 +10,7 @@ with open(path.join(HERE, 'README.md'), encoding='utf-8') as readme:
 setup(
     name='kepsimgen',
     install_requires=['keppy'],
-    version='0.0.1',
+    version='0.0.3',
     description='CLI tool that converts Kepware projects into simulation projects',
     long_description=LONG_DESCRIPTION,
     long_description_content_type='text/markdown',
